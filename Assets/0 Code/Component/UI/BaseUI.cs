@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseUI : BaseComponent {
+public abstract class BaseUI : BaseComponent {
 
-	private void BaseUIBegin() {
-		BaseUIBegin();
+	protected void BaseUIBegin() {
+		BaseComponentBegin();
 	}
 }

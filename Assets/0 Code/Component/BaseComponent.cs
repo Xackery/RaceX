@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseComponent : MonoBehaviour {
+public abstract class BaseComponent : MonoBehaviour {
 
-	private void BaseComponentBegin() {
+	protected void BaseComponentBegin() {
 
 	}
 }
