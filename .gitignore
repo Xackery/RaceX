@@ -9,7 +9,6 @@ bin/
 *.sln
 *.userprefs
 *.suo
-*.dll
 *.csproj
 *.db
 *.DS_Store
