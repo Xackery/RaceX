@@ -168,7 +168,7 @@ namespace UnityTest
 		internal Type[] GetAllComponents ( GameObject gameObject )
 		{
 			var result = new List<Type>();
-			var components = gameObject.GetComponents(typeof(BaseComponent));
+			var components = gameObject.GetComponents(typeof(MonoBehaviour));
 			foreach (var component in components)
 			{
 				var componentType = component.GetType();

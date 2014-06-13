@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-interface ILogger : IEntity {
+interface ILoggerEntity : IEntity {
 	void Log(string message);
 }

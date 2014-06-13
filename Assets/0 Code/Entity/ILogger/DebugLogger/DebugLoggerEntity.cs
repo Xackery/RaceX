@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ScreenLogger : ILogger {
+public class DebugLoggerEntity : ILoggerEntity {
 	public void Log(string message) {
-		//Todo: Add Screen Logger
+		Debug.Log (message);
 	}
 }

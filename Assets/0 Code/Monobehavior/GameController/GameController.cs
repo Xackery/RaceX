@@ -4,7 +4,8 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 	private IGameEntity gameEntity;
 	private ISessionEntity sessionEntity;
-	private ILogger gameLog;
+	private ILoggerEntity logEntity;
+
 	private static GameController instance;
 
 	public static GameController GetInstance() {
@@ -17,7 +18,7 @@ public class GameController : MonoBehaviour {
 			return;
 		}
 		instance = this;
-		gameEntity = new RaceXStartup();
+		gameEntity = new RaceXEntity();
 		gameEntity.Initialize();
 		DontDestroyOnLoad(transform);
 	}

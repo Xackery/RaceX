@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RaceXStartup : IGameEntity {
+public class RaceXEntity : IGameEntity {
 	private bool isInitialized;
 
 	public void Initialize() {

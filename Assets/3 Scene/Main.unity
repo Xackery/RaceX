@@ -461,7 +461,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &388664051
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +530,7 @@ Transform:
   m_LocalScale: {x: 90, y: .100000001, z: 90}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &513119927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,6 +1367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tankController: {fileID: 0}
+  body: {fileID: 0}
+  myTransform: {fileID: 0}
   maxPower: 210
   maxPowerRPM: 5000
   maxTorque: 360
@@ -1377,6 +1379,8 @@ MonoBehaviour:
   maxNetTorque: 0
   maxNetTorqueRPM: 0
   torque: 0
+  netTorque: 0
+  netTorqueImpulse: 0
   minRPM: 1000
   maxRPM: 6000
   canStall: 0
@@ -1385,8 +1389,10 @@ MonoBehaviour:
   revLimiterTime: .100000001
   revLimiterTriggered: 0
   revLimiterReleased: 0
+  timer: 0
   engineInertia: .300000012
   drivetrainInertia: .0199999996
+  rotationalInertia: 0
   engineFrictionFactor: .25
   engineOrientation: {x: 0, y: 0, z: 1}
   transmission: 0
@@ -1418,24 +1424,46 @@ MonoBehaviour:
   currentConsumption: 0
   istantConsumption: 0
   RPMAtSpeedInLastGear: 0
+  secondsToCover100Km: 0
   clutchEngageSpeed: 0
+  clutchPosition: 0
   throttle: 0
   idlethrottle: 0
+  idlethrottleMinRPMDown: 0
+  idleNetTorque: 0
   startTorque: 0
+  startThrottle: 0
+  nextStartImpulse: 0
+  duration: 0
   shiftTriggered: 0
   soundPlayed: 0
   clutchDragImpulse: 0
+  TransferredTorque: 0
   differentialSpeed: 0
+  clutchSpeed: 0
   engaging: 0
+  shiftTimer: 0
+  TimeToShiftAgain: 0
   CanShiftAgain: 1
+  ShiftDelay: -1
+  lastShiftTime: -1
   gear: 1
   rpm: 0
+  slipRatio: 0
+  idealSlipRatio: 0
+  engineAngularVelo: 0
   angularVelo2RPM: 9.54929638
   RPM2angularVelo: .104719758
   KW2CV: 1.35899997
   CV2KW: .735800028
   maxPowerDriveShaft: 0
   currentPower: 0
+  maxPowerKW: 0
+  maxPowerAngVel: 0
+  maxPowerEngineTorque: 0
+  P1: 0
+  P2: 0
+  P3: 0
   curveFactor: 0
   frictionTorque: 0
   powerMultiplier: 1
@@ -1443,8 +1471,13 @@ MonoBehaviour:
   ratio: 0
   lastGearRatio: 0
   changingGear: 0
+  shiftImmediately: 0
+  nextGear: 0
+  lockingTorqueImpulse: 0
+  max_power: 0
   drivetrainFraction: 0
   velo: 0
+  fuel: 1
   RPMAt130Kmh: 0
 --- !u!114 &1193862139
 MonoBehaviour:
@@ -1457,9 +1490,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c6b0679666d0748b8154345c367a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  steerTimer: 0
+  myTransform: {fileID: 0}
   brake: 0
   throttle: 0
   steering: 0
+  oldSteering: 0
+  deltaSteering: 0
+  steeringVelo: 0
+  maxSteer: 1
+  maxThrottle: 1
   brakeKey: 0
   accelKey: 0
   steerInput: 0
@@ -1468,6 +1508,10 @@ MonoBehaviour:
   handbrakeInput: 0
   clutchInput: 0
   startEngineInput: 0
+  body: {fileID: 0}
+  drivetrain: {fileID: 0}
+  velo: 0
+  veloKmh: 0
   smoothInput: 1
   throttleTime: .100000001
   throttleReleaseTime: .100000001
@@ -1495,14 +1539,14 @@ MonoBehaviour:
   ESPStrength: 2
   ESPMinVelocity: 35
   reverse: 0
-  throttleAxis: Throttle
-  brakeAxis: Brake
-  steerAxis: Horizontal
-  handbrakeAxis: Handbrake
-  clutchAxis: Clutch
-  shiftUpButton: ShiftUp
-  shiftDownButton: ShiftDown
-  startEngineButton: StartEngine
+  throttleAxis: 5468726f74746c65
+  brakeAxis: 4272616b65
+  steerAxis: 486f72697a6f6e74616c
+  handbrakeAxis: 48616e646272616b65
+  clutchAxis: 436c75746368
+  shiftUpButton: 53686966745570
+  shiftDownButton: 5368696674446f776e
+  startEngineButton: 5374617274456e67696e65
 --- !u!1 &1243265030
 GameObject:
   m_ObjectHideFlags: 0
