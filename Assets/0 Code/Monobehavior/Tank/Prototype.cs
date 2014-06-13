@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Prototype : BaseTank {
+public class Prototype : MonoBehaviour {
 
 	void Awake() {
-		BaseTankBegin();
 	}
 
 	void Start () {
