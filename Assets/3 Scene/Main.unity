@@ -1309,244 +1309,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1169683392}
   m_Mesh: {fileID: 4300026, guid: 2271ea500b7f43545979afb32c8b4081, type: 3}
---- !u!1 &1193862135
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1193862136}
-  - 54: {fileID: 1193862137}
-  - 114: {fileID: 1193862139}
-  - 114: {fileID: 1193862138}
-  m_Layer: 0
-  m_Name: Tank
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1193862136
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1193862135}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1892469133}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
---- !u!54 &1193862137
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1193862135}
-  serializedVersion: 2
-  m_Mass: 1450
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1193862138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1193862135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79315a46d8c91fd44aedd184c0cc8963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tankController: {fileID: 0}
-  body: {fileID: 0}
-  myTransform: {fileID: 0}
-  maxPower: 210
-  maxPowerRPM: 5000
-  maxTorque: 360
-  maxTorqueRPM: 2500
-  originalMaxPower: 210
-  maxNetPower: 0
-  maxNetPowerRPM: 0
-  maxNetTorque: 0
-  maxNetTorqueRPM: 0
-  torque: 0
-  netTorque: 0
-  netTorqueImpulse: 0
-  minRPM: 1000
-  maxRPM: 6000
-  canStall: 0
-  startEngine: 0
-  revLimiter: 0
-  revLimiterTime: .100000001
-  revLimiterTriggered: 0
-  revLimiterReleased: 0
-  timer: 0
-  engineInertia: .300000012
-  drivetrainInertia: .0199999996
-  rotationalInertia: 0
-  engineFrictionFactor: .25
-  engineOrientation: {x: 0, y: 0, z: 1}
-  transmission: 0
-  gearRatios:
-  - -2.66000009
-  - 0
-  - 2.66000009
-  - 1.90999997
-  - 1.38999999
-  - 1
-  - .709999979
-  neutral: 1
-  first: 0
-  firstReverse: 0
-  finalDriveRatio: 6.09000015
-  differentialLockCoefficient: 80
-  shifter: 0
-  automatic: 1
-  autoReverse: 1
-  shiftDownRPM: 2000
-  shiftUpRPM: 0
-  shiftTime: .5
-  clutchMaxTorque: 0
-  autoClutch: 1
-  engageRPM: 1500
-  disengageRPM: 1000
-  _fuelConsumptionAtCostantSpeed: 4.30000019
-  _fuelConsumptionSpeed: 130
-  currentConsumption: 0
-  istantConsumption: 0
-  RPMAtSpeedInLastGear: 0
-  secondsToCover100Km: 0
-  clutchEngageSpeed: 0
-  clutchPosition: 0
-  throttle: 0
-  idlethrottle: 0
-  idlethrottleMinRPMDown: 0
-  idleNetTorque: 0
-  startTorque: 0
-  startThrottle: 0
-  nextStartImpulse: 0
-  duration: 0
-  shiftTriggered: 0
-  soundPlayed: 0
-  clutchDragImpulse: 0
-  TransferredTorque: 0
-  differentialSpeed: 0
-  clutchSpeed: 0
-  engaging: 0
-  shiftTimer: 0
-  TimeToShiftAgain: 0
-  CanShiftAgain: 1
-  ShiftDelay: -1
-  lastShiftTime: -1
-  gear: 1
-  rpm: 0
-  slipRatio: 0
-  idealSlipRatio: 0
-  engineAngularVelo: 0
-  angularVelo2RPM: 9.54929638
-  RPM2angularVelo: .104719758
-  KW2CV: 1.35899997
-  CV2KW: .735800028
-  maxPowerDriveShaft: 0
-  currentPower: 0
-  maxPowerKW: 0
-  maxPowerAngVel: 0
-  maxPowerEngineTorque: 0
-  P1: 0
-  P2: 0
-  P3: 0
-  curveFactor: 0
-  frictionTorque: 0
-  powerMultiplier: 1
-  externalMultiplier: 1
-  ratio: 0
-  lastGearRatio: 0
-  changingGear: 0
-  shiftImmediately: 0
-  nextGear: 0
-  lockingTorqueImpulse: 0
-  max_power: 0
-  drivetrainFraction: 0
-  velo: 0
-  fuel: 1
-  RPMAt130Kmh: 0
---- !u!114 &1193862139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1193862135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c6b0679666d0748b8154345c367a37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  steerTimer: 0
-  myTransform: {fileID: 0}
-  brake: 0
-  throttle: 0
-  steering: 0
-  oldSteering: 0
-  deltaSteering: 0
-  steeringVelo: 0
-  maxSteer: 1
-  maxThrottle: 1
-  brakeKey: 0
-  accelKey: 0
-  steerInput: 0
-  brakeInput: 0
-  throttleInput: 0
-  handbrakeInput: 0
-  clutchInput: 0
-  startEngineInput: 0
-  body: {fileID: 0}
-  drivetrain: {fileID: 0}
-  velo: 0
-  veloKmh: 0
-  smoothInput: 1
-  throttleTime: .100000001
-  throttleReleaseTime: .100000001
-  maxThrottleInReverse: 1
-  brakesTime: .100000001
-  brakesReleaseTime: .100000001
-  steerTime: .100000001
-  steerReleaseTime: .100000001
-  veloSteerTime: .0500000007
-  veloSteerReleaseTime: .0500000007
-  steerCorrectionFactor: 0
-  steerAssistance: 1
-  SteerAssistanceMinVelocity: 20
-  TCS: 1
-  TCSTriggered: 0
-  TCSThreshold: 0
-  TCSMinVelocity: 20
-  externalTCSThreshold: 0
-  ABS: 1
-  ABSTriggered: 0
-  ABSThreshold: 0
-  ABSMinVelocity: 20
-  ESP: 1
-  ESPTriggered: 0
-  ESPStrength: 2
-  ESPMinVelocity: 35
-  reverse: 0
-  throttleAxis: 5468726f74746c65
-  brakeAxis: 4272616b65
-  steerAxis: 486f72697a6f6e74616c
-  handbrakeAxis: 48616e646272616b65
-  clutchAxis: 436c75746368
-  shiftUpButton: 53686966745570
-  shiftDownButton: 5368696674446f776e
-  startEngineButton: 5374617274456e67696e65
 --- !u!1 &1243265030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,6 +1484,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1361664410}
   m_Mesh: {fileID: 4300048, guid: 2271ea500b7f43545979afb32c8b4081, type: 3}
+--- !u!1 &1444764821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1444764822}
+  m_Layer: 0
+  m_Name: Prototype
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1444764822
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1444764821}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1865276597}
+  m_Father: {fileID: 2017201946}
+  m_RootOrder: 0
 --- !u!1 &1618278052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,8 +1710,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 2271ea500b7f43545979afb32c8b4081, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1865276596}
-  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: .029852042, y: 3.55271373e-16, z: -1.77232265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .029852042, y: 0, z: -1.77232265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 931871072}
@@ -1936,7 +1726,7 @@ Transform:
   - {fileID: 1693131493}
   - {fileID: 1061297146}
   - {fileID: 260257065}
-  m_Father: {fileID: 1892469133}
+  m_Father: {fileID: 1444764822}
   m_RootOrder: 0
 --- !u!23 &1865276598
 Renderer:
@@ -1980,34 +1770,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2271ea500b7f43545979afb32c8b4081, type: 3}
---- !u!1 &1892469132
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100062, guid: 2271ea500b7f43545979afb32c8b4081, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1892469133}
-  m_Layer: 0
-  m_Name: Prototype
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1892469133
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400062, guid: 2271ea500b7f43545979afb32c8b4081, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1892469132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1865276597}
-  m_Father: {fileID: 1193862136}
-  m_RootOrder: 0
 --- !u!1 &1907593047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2006,50 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1985709042}
   m_Mesh: {fileID: 4300002, guid: 2271ea500b7f43545979afb32c8b4081, type: 3}
+--- !u!1 &2017201945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2017201946}
+  - 54: {fileID: 2017201947}
+  m_Layer: 0
+  m_Name: Tank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2017201946
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2017201945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1444764822}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+--- !u!54 &2017201947
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2017201945}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2021000592
 GameObject:
   m_ObjectHideFlags: 0
