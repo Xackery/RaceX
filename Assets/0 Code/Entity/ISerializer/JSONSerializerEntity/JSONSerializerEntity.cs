@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using JsonFx.Json;
 
-public class JSONSerializer : ISerializer {
+public class JSONSerializer : ISerializerEntity {
 	private static JSONSerializer jsonManagerInstance;
 	
 	public JSONSerializer() {

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 	private IGameEntity gameEntity;
-	private ISessionEntity sessionEntity;
 	private ILoggerEntity logEntity;
 
 	private static GameController instance;
@@ -19,7 +18,6 @@ public class GameController : MonoBehaviour {
 		}
 		instance = this;
 		gameEntity = new RaceXEntity();
-		gameEntity.Initialize();
 		DontDestroyOnLoad(transform);
 	}
 

@@ -2,8 +2,9 @@
 using System.Collections;
 
 public interface IGameEntity : IEntity {
-	void Initialize();
 	void Begin();
+	void SetPlayerName(string name);
+	string GetPlayerName();
 	void Closing();
 	void Shutdown();
 }

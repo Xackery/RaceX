@@ -2,6 +2,7 @@
 using System.Collections;
 
 public abstract class BaseGameData : BaseData {
-	protected float timePlayingTotal;
-	protected float timePlayingThisSession;
+	public float timePlayingTotal;
+	public float timePlayingThisSession;
+	public string playerName;
 }
