@@ -43,19 +43,40 @@ namespace UnityTest
 		}
 
 		[Test]
-		public void SerializeEmptyGameData() {
-			gameEntity.SetPlayerName("");
-			string serializedGame = serializerEntity.SerializeToString(gameEntity.GetGameData());
-			loggerEntity.Log (serializedGame);
-			Assert.True(serializedGame == "{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"\"}");
+		public void SetGameScore() {
+			gameEntity = new RaceXEntity();
+			gameEntity.SetGameScore(0);
+			Assert.True(gameEntity.GetGameScore() == 0);
+		}
 
+		[Test]
+		public void AddGameScore() {
+			gameEntity = new RaceXEntity();
+			gameEntity.SetGameScore(1);
+			gameEntity.AddGameScore(1);
+			Assert.True(gameEntity.GetGameScore() == 2);
+		}
+
+		[Test]
+		public void SubtractGameScore() {
+			gameEntity = new RaceXEntity();
+			gameEntity.SetGameScore(1);
+			gameEntity.SubtractGameScore(1);
+			Assert.True(gameEntity.GetGameScore() == 0);
+		}
+
+		[Test]
+		public void SerializeEmptyGameData() {
+			gameEntity = new RaceXEntity();
+			string serializedGame = serializerEntity.SerializeToString(gameEntity.GetGameData());
+			Assert.True(serializedGame == "{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"\",\"gameScore\":0}");
 		}
 
 		[Test]
 		public void SerializeGameDataWithTestName() {
 			gameEntity.SetPlayerName("Test");
 			string serializedGame = serializerEntity.SerializeToString(gameEntity.GetGameData());
-			Assert.True(serializedGame == "{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"Test\"}");
+			Assert.True(serializedGame == "{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"Test\",\"gameScore\":0}");
 		}
 
 		[Test]
@@ -64,8 +85,11 @@ namespace UnityTest
 			string serializedGame = serializerEntity.SerializeToString(gameEntity.GetGameData());
 			gameEntity.SetPlayerName("");
 			gameEntity.SetGameData(serializerEntity.DeserializeFromString<RaceXData>(serializedGame));
-			Assert.True(serializedGame == "{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"Test\"}");
+			Assert.True(serializedGame == "{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"Test\",\"gameScore\":0}");
 		}
+
+
+
 
 	}
 }

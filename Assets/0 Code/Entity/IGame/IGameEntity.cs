@@ -7,6 +7,12 @@ public interface IGameEntity : IEntity {
 	string GetPlayerName();
 	BaseGameData GetGameData();
 	void SetGameData(BaseGameData data);
+
+	int GetGameScore();
+	void SetGameScore(int value);
+	void SubtractGameScore(int value);
+	void AddGameScore(int value);
+
 	void Closing();
 	void Shutdown();
 }
