@@ -20,7 +20,7 @@ namespace UnityTest
 
 		[Test]
 		public void CreateSerializer() {
-			serializerEntity = new JSONSerializer();
+			serializerEntity = new JSONSerializerEntity();
 			Assert.IsNotNull(serializerEntity);
 		}
 
