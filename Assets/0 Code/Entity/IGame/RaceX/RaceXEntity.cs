@@ -12,6 +12,14 @@ public class RaceXEntity : IGameEntity {
 
 	}
 
+	public BaseGameData GetGameData() {
+		return gameData;
+	}
+
+	public void SetGameData(BaseGameData data) {
+		gameData = data;
+	}
+
 	public void SetPlayerName(string name) {
 		if (name.Length > 127) throw new System.ArgumentException("Name length must be less than 127 characters");
 		gameData.playerName = name;

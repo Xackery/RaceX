@@ -44,24 +44,27 @@ namespace UnityTest
 
 		[Test]
 		public void SerializeEmptyGameData() {
-			string serializedGame = serializerEntity.SerializeToString(gameEntity);			
-			Assert.True(serializedGame == "{\"gameData\":{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"\"}}");
+			gameEntity.SetPlayerName("");
+			string serializedGame = serializerEntity.SerializeToString(gameEntity.GetGameData());
+			loggerEntity.Log (serializedGame);
+			Assert.True(serializedGame == "{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"\"}");
+
 		}
 
 		[Test]
 		public void SerializeGameDataWithTestName() {
 			gameEntity.SetPlayerName("Test");
-			string serializedGame = serializerEntity.SerializeToString(gameEntity);
-			Assert.True(serializedGame == "{\"gameData\":{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"Test\"}}");
+			string serializedGame = serializerEntity.SerializeToString(gameEntity.GetGameData());
+			Assert.True(serializedGame == "{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"Test\"}");
 		}
 
 		[Test]
 		public void SerializeAndDeserializeGameDataWithTestName() {
 			gameEntity.SetPlayerName("Test");
-			string serializedGame = serializerEntity.SerializeToString(gameEntity);
+			string serializedGame = serializerEntity.SerializeToString(gameEntity.GetGameData());
 			gameEntity.SetPlayerName("");
-			gameEntity = serializerEntity.DeserializeFromString<IGameEntity>(serializedGame);
-			Assert.True(serializedGame == "{\"gameData\":{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"Test\"}}");
+			gameEntity.SetGameData(serializerEntity.DeserializeFromString<RaceXData>(serializedGame));
+			Assert.True(serializedGame == "{\"timePlayingTotal\":0,\"timePlayingThisSession\":0,\"playerName\":\"Test\"}");
 		}
 
 	}
